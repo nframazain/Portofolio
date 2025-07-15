@@ -205,7 +205,7 @@ const HeroSection = () => {
                 technology industry.
               </p>
               <a
-                href="/komponen/Final Portfolio_Imam Ariadi.pdf"
+                href="/komponen/Naswan Fachri Ramadhan Zain Resume.pdf"
                 className="btn btn-secondary banner_btn"
                 target="_blank"
                 rel="noopener noreferrer"

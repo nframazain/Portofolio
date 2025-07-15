@@ -5,16 +5,32 @@ function PortfolioControls({ setFilter }) {
 
   return (
     <div class="controls text-center" className="controls text-center">
-      <button class="filter active btn btn-common" className="filter btn btn-common" onClick={handleClick('all')}>
+      <button
+        class="filter active btn btn-common"
+        className="filter btn btn-common"
+        onClick={handleClick("all")}
+      >
         All
       </button>
-      <button class="filter btn btn-common" className="filter btn btn-common" onClick={handleClick('design')}>
+      <button
+        class="filter btn btn-common"
+        className="filter btn btn-common"
+        onClick={handleClick("design")}
+      >
         UI/UX Designers
       </button>
-      <button class="filter btn btn-common" className="filter btn btn-common" onClick={handleClick('development')}>
+      <button
+        class="filter btn btn-common"
+        className="filter btn btn-common"
+        onClick={handleClick("development")}
+      >
         Fullstack Development
       </button>
-      <button class="filter btn btn-common" className="filter btn btn-common" onClick={handleClick('print')}>
+      <button
+        class="filter btn btn-common"
+        className="filter btn btn-common"
+        onClick={handleClick("print")}
+      >
         Graphic Design
       </button>
     </div>
@@ -31,20 +47,17 @@ function PortfolioCard({ item }) {
   );
 }
 
-const portfolioItems = [
-  { id: 1, category: 'design', title: 'UI/UX Design 1', description: 'Description of UI/UX Design 1', image: 'src/img/b5.png' },
-  { id: 2, category: 'development', title: 'Fullstack Development 1', description: 'Description of Fullstack Development 1', image: 'src/img/b5.png' },
-  { id: 3, category: 'print', title: 'Graphic Design 1', description: 'Description of Graphic Design 1', image: 'src/img/b5.png' },
-  { id: 4, category: 'design', title: 'UI/UX Design 2', description: 'Description of UI/UX Design 2', image: 'src/img/b5.png' },
-  { id: 5, category: 'development', title: 'Fullstack Development 2', description: 'Description of Fullstack Development 2', image: 'src/img/b5.png' },
-];
+const portfolioItems = [];
 
 function Portfolio({ filter }) {
-  const filteredItems = filter === 'all' ? portfolioItems : portfolioItems.filter(item => item.category === filter);
+  const filteredItems =
+    filter === "all"
+      ? portfolioItems
+      : portfolioItems.filter((item) => item.category === filter);
 
   return (
     <div className="portfolio">
-      {filteredItems.map(item => (
+      {filteredItems.map((item) => (
         <PortfolioCard key={item.id} item={item} />
       ))}
     </div>
@@ -52,7 +65,7 @@ function Portfolio({ filter }) {
 }
 
 function App() {
-  const [filter, setFilter] = useState('all');
+  const [filter, setFilter] = useState("all");
 
   return (
     <div className="app">
@@ -62,5 +75,5 @@ function App() {
   );
 }
 
-const rootElement = document.getElementById('root');
+const rootElement = document.getElementById("root");
 ReactDOM.render(<App />, rootElement);
