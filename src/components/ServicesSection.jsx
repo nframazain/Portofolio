@@ -1,4 +1,4 @@
-import { services } from '../data/portfolioData';
+import { services } from "../data/portfolioData";
 
 const ServicesSection = () => {
   return (
@@ -14,14 +14,14 @@ const ServicesSection = () => {
             </div>
           </div>
         </div>
-        
+
         {/* Services Grid */}
-        <div className="row services-grid">
+        <div className="row services-grid" style={{ justifyContent: "center" }}>
           {services.map((service, index) => (
-            <div key={service.id} className="col-lg-4 col-md-6 col-xs-12">
-              <div 
-                className="services-item wow fadeInUp" 
-                data-wow-delay={`${0.8 + (index * 0.2)}s`}
+            <div key={service.id}>
+              <div
+                className="services-item wow fadeInUp"
+                data-wow-delay={`${0.8 + index * 0.2}s`}
                 data-aos="fade-up"
                 data-aos-delay={index * 200}
               >
