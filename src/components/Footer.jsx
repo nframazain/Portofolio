@@ -60,7 +60,7 @@ Sent from footer contact form`;
                 </div>
                 <div className="contact-item">
                   <i className="fa fa-envelope"></i>
-                  <span>Rama.Zain@gmail.com</span>
+                  <span>ramazain95@gmail.com</span>
                 </div>
               </div>
             </div>

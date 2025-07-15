@@ -20,14 +20,22 @@ export const portfolioData = [
     category: "backend",
     title: "SafeFood App",
     description:
-      "Sistem microservices untuk aplikasi fintech dengan service discovery dan load balancing.",
+      "SafeFood is a platform that tackles food waste by connecting donors with communities in need. Using Google Cloud as a scalable and secure backend infrastructure.",
     image: "/assets/img/b6.png",
     images: ["/assets/img/b6.png", "/assets/img/b7.png"],
-    technologies: ["Docker", "Kubernetes", "PostgreSQL", "Redis", "RabbitMQ"],
+    technologies: [
+      "Docker",
+      ,
+      "Postman",
+      "Compute Engine",
+      "Cloud Storage",
+      "Cloud SQL",
+      "RESTful API",
+    ],
     type: "project",
-    githubUrl: "https://github.com/imam/fintech-microservices",
+    githubUrl: "https://github.com/aryasetiap/SafeFood-BangkitCapstone",
     details:
-      "Arsitektur terdiri dari 8 microservices yang handle user management, transaction processing, notification service, dan audit logging. Deployed menggunakan CI/CD pipeline.",
+      "Food waste that is unused or still fit for consumption is often discarded, despite its potential to be composted or donated to communities in need. This issue not only harms the environment but also weakens food security, impacting millions who face hunger daily. SafeFood addresses these challenges by connecting contributors with suitable recipients, aligning with the Sustainable Development Goals (SDGs) of ending hunger, promoting responsible consumption, and addressing climate change. By facilitating access and ensuring safe, appropriate food distribution, this platform aims to reduce food waste while benefiting vulnerable communities.",
     featured: true,
   },
   {
@@ -55,31 +63,31 @@ export const allPortfolioData = [
   ...portfolioData, // 9 project featured
 
   // Additional Backend Projects
-  {
-    id: 14,
-    category: "backend",
-    title: "Authentication Service",
-    description:
-      "Microservice untuk authentication dengan JWT, OAuth, dan multi-factor authentication.",
-    image: "/assets/img/hero-section.png",
-    technologies: ["Node.js", "Express", "PostgreSQL", "Redis", "Passport.js"],
-    type: "project",
-    githubUrl: "https://github.com/imam/auth-service",
-    details:
-      "Service yang handle authentication untuk multiple applications dengan rate limiting dan session management.",
-  },
-  {
-    id: 15,
-    category: "backend",
-    title: "File Storage API",
-    description:
-      "RESTful API untuk file upload, processing, dan CDN distribution dengan image optimization.",
-    image: "/assets/img/foto imamprofil.png",
-    technologies: ["Python", "FastAPI", "AWS S3", "Celery", "ImageMagick"],
-    type: "demo",
-    demoUrl: "https://file-api-docs.herokuapp.com",
-    githubUrl: "https://github.com/imam/file-storage-api",
-  },
+  // {
+  //   id: 14,
+  //   category: "backend",
+  //   title: "Authentication Service",
+  //   description:
+  //     "Microservice untuk authentication dengan JWT, OAuth, dan multi-factor authentication.",
+  //   image: "/assets/img/hero-section.png",
+  //   technologies: ["Node.js", "Express", "PostgreSQL", "Redis", "Passport.js"],
+  //   type: "project",
+  //   githubUrl: "https://github.com/imam/auth-service",
+  //   details:
+  //     "Service yang handle authentication untuk multiple applications dengan rate limiting dan session management.",
+  // },
+  // {
+  //   id: 15,
+  //   category: "backend",
+  //   title: "File Storage API",
+  //   description:
+  //     "RESTful API untuk file upload, processing, dan CDN distribution dengan image optimization.",
+  //   image: "/assets/img/foto imamprofil.png",
+  //   technologies: ["Python", "FastAPI", "AWS S3", "Celery", "ImageMagick"],
+  //   type: "demo",
+  //   demoUrl: "https://file-api-docs.herokuapp.com",
+  //   githubUrl: "https://github.com/imam/file-storage-api",
+  // },
 ];
 
 export const portfolioCategories = [

@@ -1,4 +1,4 @@
-# Imam Ariadi Portfolio - React Migration
+# Rama Zain Portfolio - React Migration
 
 Portfolio website yang telah dimigrasi dari HTML statis ke React.js dengan mempertahankan semua fitur dan fungsionalitas yang ada.
 
@@ -28,12 +28,14 @@ Portfolio website yang telah dimigrasi dari HTML statis ke React.js dengan mempe
 ## 📦 Installation & Setup
 
 1. **Install Dependencies**
+
    ```bash
    cd c:\programming\My-Portfolio-1
    npm install
    ```
 
 2. **Start Development Server**
+
    ```bash
    npm run dev
    # atau
@@ -41,6 +43,7 @@ Portfolio website yang telah dimigrasi dari HTML statis ke React.js dengan mempe
    ```
 
 3. **Build for Production**
+
    ```bash
    npm run build
    ```
@@ -82,18 +85,22 @@ c:\programming\My-Portfolio-1\
 ## 🔄 Perubahan Utama
 
 ### 1. **Navigation System**
+
 - ❌ jQuery OnePageNav → ✅ React smooth scroll
 - Mempertahankan anchor-based navigation (#home, #services, dll)
 
 ### 2. **State Management**
+
 - ❌ jQuery state → ✅ React useState hooks
 - Portfolio filter sekarang menggunakan React state
 
 ### 3. **Animations**
+
 - ❌ WOW.js → ✅ Custom AOS implementation dengan Intersection Observer
 - ❌ jQuery animations → ✅ CSS transitions + React
 
 ### 4. **Build System**
+
 - ❌ Direct HTML loading → ✅ Vite build system
 - ❌ CDN React → ✅ NPM packages
 
@@ -108,9 +115,11 @@ c:\programming\My-Portfolio-1\
 ## 🔧 Cara Menjalankan
 
 1. **Development Mode:**
+
    ```bash
    npm run dev
    ```
+
    Akan membuka browser di `http://localhost:3000`
 
 2. **Production Build:**
@@ -140,13 +149,15 @@ c:\programming\My-Portfolio-1\
 ### Masalah Yang Diperbaiki:
 
 1. **✅ Navbar Langsung Terlihat**
+
    - **Masalah**: Navbar muncul sebelum preloader selesai
    - **Solusi**: Tambahkan state `isLoading` yang di-pass ke Navbar
    - **Result**: Navbar hidden selama preloader, muncul smooth setelah loading
 
 2. **✅ Particles.js Tidak Jalan**
+
    - **Masalah**: Background animated elements hilang
-   - **Solusi**: 
+   - **Solusi**:
      - Script particles.js diload prioritas pertama
      - Particles initialization delayed sampai preloader selesai
      - Added proper error handling dan logging
@@ -158,16 +169,22 @@ c:\programming\My-Portfolio-1\
    - Added `scripts-loaded` class untuk debugging
 
 ### Debug Console Commands:
+
 ```javascript
 // Check if particles.js loaded
-console.log('particlesJS available:', typeof window.particlesJS);
+console.log("particlesJS available:", typeof window.particlesJS);
 
 // Check if particles is initialized
-console.log('Particles canvas:', document.querySelector('#particles-js canvas'));
+console.log(
+  "Particles canvas:",
+  document.querySelector("#particles-js canvas")
+);
 
 // Reinitialize particles manually (if needed)
 if (window.particlesJS) {
-  window.particlesJS('particles-js', { /* config */ });
+  window.particlesJS("particles-js", {
+    /* config */
+  });
 }
 ```
 

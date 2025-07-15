@@ -143,7 +143,7 @@ const HeroSection = () => {
           };
 
           // Start animation dengan timing yang sinkron dengan CSS cursor animation
-          const intervalId = setInterval(showNextWord, 3000);
+          const intervalId = setInterval(showNextWord, 6000);
 
           // Store interval ID for cleanup
           headline.animationInterval = intervalId;
